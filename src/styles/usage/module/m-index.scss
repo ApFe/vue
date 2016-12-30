@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.m-index{
+    @include flexbox();
+    @include flex-direction(column);
+    height: 100%;
+    header{
+        height: .70rem;
+        background-color:red ;
+        ul{
+           @include flexbox();
+           height: 100%;
+           li:first-child,
+           li:last-child{
+               width: .70rem;
+               height: 100%;
+           }
+           li:nth-child(2){
+               @include flex();
+           }
+        }
+    }   
+    section{
+        background-color: grey;
+        @include flex();
+        width: 100%;
+    } 
+    footer{
+        height: .70rem;
+        background-color:peru ;
+    }
+    >*{
+        width: 100%;
+    }
+}
