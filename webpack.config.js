@@ -1,3 +1,4 @@
+//webpack配置文件
 var webpack = require('webpack');
 var ET=require('extract-text-webpack-plugin');
 module.exports={
@@ -24,9 +25,23 @@ module.exports={
 			{
 				test:/\.html$/,
 				loader:'string'
+			},
+			{
+				test:/\.vue$/,
+				loader:'vue'
 			}
 		]
 	},
+	vue:{
+		loader:{
+			js:'babel'
+		}
+	},
+	resolve: {
+	    alias: {
+	      'vue$': 'vue/dist/vue.min.js'
+	    }
+  	},
 	devServer:{
 		contentBase:__dirname + '/prd',
 		port:80,
@@ -41,6 +56,7 @@ module.exports={
 		}
 	},
 	plugins:[
+		new webpack.optimize.UglifyJsPlugin(),
 		new ET('bundle.css')
 	]
 }

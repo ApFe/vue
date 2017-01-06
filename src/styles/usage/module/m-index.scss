@@ -1,35 +1,96 @@
 @charset "UTF-8";
-
-.m-index{
-    @include flexbox();
-    @include flex-direction(column);
+@import "./common";
+#app{
     height: 100%;
-    header{
-        height: .70rem;
-        background-color:red ;
-        ul{
-           @include flexbox();
-           height: 100%;
-           li:first-child,
-           li:last-child{
-               width: .70rem;
-               height: 100%;
-           }
-           li:nth-child(2){
-               @include flex();
-           }
+
+    .m-index{
+        
+        @include flexbox();
+        @include flex-direction(column);
+        height: 100%;
+            header{
+                height:.52rem;
+                background:#ff5792;
+                ul{
+                   @include flexbox();
+                   height: .52rem;
+                   li{
+                       line-height: .52rem;
+                       color: $base-color;
+                   }
+                   li:nth-child(2){
+                       @include flexbox();
+                       background: rgba(254, 121, 166, 0.6);
+                       border-radius: .1rem 0 0 .1rem;
+                       margin-top: .14rem;
+                       width: .81rem;
+                       height: .25rem;
+                       >span{
+                           @include flex();
+                           width: 100%;
+                           text-align: center;
+                           font-size:.14rem ;
+                           margin-top: -.14rem;
+                       }
+                       span:nth-child(2){
+                           color: gold;
+                       }
+                   }
+                   li:first-child{
+                       @include flex();
+                       i{
+                           @include transform(translateX(-50%));
+                           left: 50%;
+                           position: relative;
+                           width: .6rem;
+                           text-align: center;
+                           line-height:.52rem ;
+                           font-size:.18rem ;
+                           font-weight: 600;
+                       }
+                   }
+                }
+            }
+        .container{
+            @include flex();
+            @include flexbox();
+            @include flex-direction(column);
+            width: 100%;
+            
+           #index-scroll{
+            height: 100%;
+            overflow:hidden;
+            @extend %many;
+         }   
         }
-    }   
-    section{
-        background-color: grey;
-        @include flex();
-        width: 100%;
-    } 
-    footer{
-        height: .70rem;
-        background-color:peru ;
-    }
-    >*{
-        width: 100%;
+        footer{
+            height: .47rem;
+            background-color:$base-color;
+            ul{
+               @include flexbox();
+               @include border(1px 0 0 0,#dfdfdf);
+               li{
+                   @include flex();
+                   &.active b,
+                   &.active i{
+                       color:$base-clr;
+                   }
+                   b,i{
+                       display: block;
+                       text-align: center;
+                       color: rgb(89,89,89);
+                   }
+                   b{
+                       font-size: .1rem;
+                   }
+                   i{
+                       font-size: .2rem;
+                   }
+               }
+            }
+        }
+        >*{
+            width: 100%;
+        }
     }
 }

@@ -3,3 +3,10 @@
 @import "./core/reset";
 //module
 @import "./module/m-index";
+
+//引入search的样式
+@import "./module/m-search";
+@import "./module/m-detail";
+@import "./module/m-circle";
+@import "./module/m-Cart";
+@import "./module/m-my";

@@ -1,10 +1,57 @@
+
 [
   {
-    "name": "xxx",
-    "age": 18
+    "id":"2016女装",
+    "imgSrc": "/images/1.gif",
+    "doorprice":"60",
+    "title": "1女装爆款全场包邮，速来抢购，全场九折......"
   },
   {
-    "name": "yyy",
-    "age": 20
+  	"id":"2016男装",
+    "imgSrc": "/images/2.gif",
+    "doorprice":"79",
+    "title": "2女装爆款全场包邮，速来抢购，全场九折......"
+  },
+  {
+  	"id":"居家服饰",
+    "imgSrc": "/images/3.gif",
+    "doorprice":"99",
+    "title": "3女装爆款全场包邮，速来抢购，全场九折......"
+  },
+  {
+  	"id":"母婴用品",
+    "imgSrc": "/images/4.gif",
+    "doorprice":"30",
+    "title": "4女装爆款全场包邮，速来抢购，全场九折......"
+  },
+  {
+  	"id":"美妆",
+    "imgSrc": "/images/5.gif",
+    "doorprice":"59",
+    "title": "5女装爆款全场包邮，速来抢购，全场九折......"
+  },
+  {
+  	"id":"品牌特价",
+    "imgSrc": "/images/6.gif",
+    "doorprice":"50",
+    "title": "6女装爆款全场包邮，速来抢购，全场九折......"
+  },
+  {
+  	"id":"绅士品牌",
+    "imgSrc": "/images/2.gif",
+    "doorprice":"79",
+    "title": "2女装爆款全场包邮，速来抢购，全场九折......"
+  },
+  {
+  	"id":"女士内衣",
+    "imgSrc": "/images/3.gif",
+    "doorprice":"79",
+    "title": "3女装爆款全场包邮，速来抢购，全场九折......"
+  },
+  {
+  	"id":"情侣睡衣",
+    "imgSrc": "/images/4.gif",
+    "doorprice":"30",
+    "title": "4女装爆款全场包邮，速来抢购，全场九折......"
   }
 ]
