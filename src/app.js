@@ -20,6 +20,7 @@ import circle from "./scripts/components/circle.vue";
 import Cart from "./scripts/components/Cart.vue";
 import my from "./scripts/components/my.vue";
 import list from "./scripts/components/list.vue";
+import my_login from "./scripts/components/my_login.vue";
 ///import header from "./scripts/components/header.vue";//=========
 
 //vue-router2
@@ -51,7 +52,10 @@ const routes = [{
 },{
     	path:'/list/:id',
     	component:list
-}
+},{
+        path:'/my_login/:id',
+         component:my_login 
+        }
 ];
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
