@@ -208,10 +208,15 @@ $base-clr:#fc2974;
           @include flexbox();
           @include flex-wrap(wrap);
           padding-right: .05rem;
+          width: 100%;
           li {
             width: 50%;
             padding-left: .05rem;
             padding-top: .05rem;
+            a{
+                display: inline-block;
+                color:#343434;
+            }
             i, b {
               background: #fff;
               display: block;

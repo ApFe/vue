@@ -72,12 +72,12 @@
 					</ul>
 					<ul class="seList">
 			            <li v-for="item in list">
-			              <i><img :src="item.imgSrc" /></i>
-			              <b>
 			              	<router-link :to="'detail/'+item.id">
-			              		{{item.title}}
+				              <i><img :src="item.imgSrc" /></i>
+				              <b>
+				              		{{item.title}}
+				              </b>
 			              	</router-link>
-			              </b>
 			            </li>
 			          </ul>
 				</section>

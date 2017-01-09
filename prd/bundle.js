@@ -66,21 +66,25 @@
 	
 	var _circle2 = _interopRequireDefault(_circle);
 	
-	var _Cart = __webpack_require__(15);
+	var _Cart = __webpack_require__(16);
 	
 	var _Cart2 = _interopRequireDefault(_Cart);
 	
-	var _my = __webpack_require__(17);
+	var _my = __webpack_require__(18);
 	
 	var _my2 = _interopRequireDefault(_my);
 	
+	var _list = __webpack_require__(20);
+	
+	var _list2 = _interopRequireDefault(_list);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var layout = __webpack_require__(19);
+	var layout = __webpack_require__(22);
 	var common = __webpack_require__(6);
 	common.render(layout);
 	
-	__webpack_require__(20);
+	__webpack_require__(23);
 	
 	//var common=require('./scripts/utils/common.js');
 	//var html=require('./scripts/tpls/index.html');
@@ -117,6 +121,9 @@
 	}, {
 	    path: '/detail/:id',
 	    component: _detail2.default
+	}, {
+	    path: '/list/:id',
+	    component: _list2.default
 	}];
 	// 3. 创建 router 实例，然后传 `routes` 配置
 	// 你还可以传别的配置参数, 不过先这么简单着吧。
@@ -591,15 +598,15 @@
 	  }))]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('section', [_vm._m(2), _vm._v(" "), _c('ul', {
 	    staticClass: "seList"
 	  }, _vm._l((_vm.list), function(item) {
-	    return _c('li', [_c('i', [_c('img', {
-	      attrs: {
-	        "src": item.imgSrc
-	      }
-	    })]), _vm._v(" "), _c('b', [_c('router-link', {
+	    return _c('li', [_c('router-link', {
 	      attrs: {
 	        "to": 'detail/' + item.id
 	      }
-	    }, [_vm._v("\n\t\t              \t\t" + _vm._s(item.title) + "\n\t\t              \t")])], 1)])
+	    }, [_c('i', [_c('img', {
+	      attrs: {
+	        "src": item.imgSrc
+	      }
+	    })]), _vm._v(" "), _c('b', [_vm._v("\n\t\t\t              \t\t" + _vm._s(item.title) + "\n\t\t\t              ")])])], 1)
 	  }))]), _vm._v(" "), _vm._m(3)])])])
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
@@ -837,10 +844,10 @@
 	var __vue_styles__ = {}
 	
 	/* script */
-	__vue_exports__ = __webpack_require__(26)
+	__vue_exports__ = __webpack_require__(14)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(14)
+	var __vue_template__ = __webpack_require__(15)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -860,145 +867,24 @@
 
 /***/ },
 /* 14 */
-/***/ function(module, exports) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "m-circle"
-	  }, [_c('div', {
-	    attrs: {
-	      "id": "index-scroll"
-	    }
-	  }, [_c('div', {
-	    staticClass: "many"
-	  }, [_vm._m(0), _vm._v(" "), _c('section', [_c('ul', {
-	    staticClass: "seList"
-	  }, _vm._l((_vm.list), function(item) {
-	    return _c('li', [_c('i', [_c('img', {
-	      attrs: {
-	        "src": item.imgSrc
-	      }
-	    })]), _vm._v(" "), _c('b', [_c('router-link', {
-	      attrs: {
-	        "to": 'detail/' + item.id
-	      }
-	    }, [_vm._v("\n\t\t              \t\t" + _vm._s(item.title) + "\n\t\t              \t")])], 1)])
-	  }))]), _vm._v(" "), _vm._m(1)])])])
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "head"
-	  }, [_c('img', {
-	    attrs: {
-	      "src": "/images/arrow.png",
-	      "width": "40",
-	      "height": "40"
-	    }
-	  }), _vm._v(" "), _c('span', [_vm._v("下拉刷新...")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "foot"
-	  }, [_c('img', {
-	    attrs: {
-	      "src": "/images/arrow.png",
-	      "width": "40",
-	      "height": "40"
-	    }
-	  }), _vm._v(" "), _c('span', [_vm._v("上拉加载更多...")])])
-	}]}
-
-/***/ },
-/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(16)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	
-	module.exports = __vue_exports__
-
-
-/***/ },
-/* 16 */
-/***/ function(module, exports) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "m-Cart"
-	  }, [_vm._v("\n\tqqqqqqqqq\n")])
-	},staticRenderFns: []}
-
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(18)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	
-	module.exports = __vue_exports__
-
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "m-my"
-	  }, [_vm._v("\n\tmy\n")])
-	},staticRenderFns: []}
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	module.exports = "<div id=\"app\">	<router-view></router-view></div>"
-
-/***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -1043,17 +929,271 @@
 			};
 		},
 		mounted: function () {
-			fetch('/api/list').then(response => response.json()).then(res => {
+			fetch('/api/Ccl').then(response => response.json()).then(res => {
 				var that = this;
 	
 				this.list = res;
 	
 				common.isAllLoaded('#index-scroll .many', function () {
-					common.scroll(that);
+					var mySwiper = new Swiper('.swiper-container', {
+						effect: 'coverflow',
+						autoplay: 3000, //可选选项，自动滑动
+						loop: true
+					});
+					//++++++++++++++++++++
+					var myScroll = new IScroll('#index-scroll', {
+						probeType: 3,
+						mouseWheel: true
+					});
+	
+					var scrollHeight = 35;
+	
+					myScroll.scrollBy(0, -scrollHeight);
+	
+					var head = $('.head img'),
+					    topImgHasClass = head.hasClass('up');
+					var foot = $('.foot img'),
+					    bottomImgHasClass = head.hasClass('down');
+					myScroll.on('scroll', function () {
+						var y = this.y,
+						    maxY = this.maxScrollY - y;
+						if (y >= 0) {
+							!topImgHasClass && head.addClass('up');
+							return '';
+						}
+						if (maxY >= 0) {
+							!bottomImgHasClass && foot.addClass('down');
+							return '';
+						}
+					});
+	
+					myScroll.on('scrollEnd', function () {
+						if (this.y >= -scrollHeight && this.y < 0) {
+							myScroll.scrollTo(0, -scrollHeight);
+							head.removeClass('up');
+						} else if (this.y >= 0) {
+							head.attr('src', '/images/ajax-loader.gif');
+							// TODO ajax下拉刷新数据
+	
+							fetch('/api/Ccl').then(response => response.json()).then(res => {
+								that.list = that.list.concat(res);
+	
+								myScroll.scrollTo(0, -scrollHeight);
+								head.removeClass('up');
+								head.attr('src', '/images/arrow.png');
+							});
+						}
+	
+						var maxY = this.maxScrollY - this.y;
+						if (maxY > -scrollHeight && maxY < 0) {
+							var self = this;
+							myScroll.scrollTo(0, self.maxScrollY + scrollHeight);
+							foot.removeClass('down');
+						} else if (maxY >= 0) {
+							foot.attr('src', '/images/ajax-loader.gif');
+							// TODO ajax上拉加载数据
+							var self = this;
+	
+							fetch('/api/Ccl').then(response => response.json()).then(res => {
+								//为什么res返回之后请求不到？？？？？？？------原因concat在数组后面追加之前数组里面多加了数组，导致追加后只是再追加新数组而不是合并，导致遍历不到
+								that.list = that.list.concat(res);
+	
+								myScroll.refresh();
+								myScroll.scrollTo(0, self.y + scrollHeight);
+								//myScroll.scrollTo(0, self.maxScollY);
+								foot.removeClass('down');
+								foot.attr('src', '/images/arrow.png');
+							});
+						}
+					});
 				});
 			}).catch(e => console.log("Oops,error", e));
 		}
 	};
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "m-circle"
+	  }, [_c('div', {
+	    attrs: {
+	      "id": "index-scroll"
+	    }
+	  }, [_c('div', {
+	    staticClass: "many"
+	  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('section', [_c('p', [_vm._v("她她圈精选")]), _vm._v(" "), _c('ul', {
+	    staticClass: "seList"
+	  }, _vm._l((_vm.list), function(item) {
+	    return _c('li', [_c('router-link', {
+	      attrs: {
+	        "to": 'list/' + item.id
+	      }
+	    }, [_c('span', [_vm._v(_vm._s(item.id))]), _vm._v(" "), _c('span', _vm._l((item.imgSrc), function(itemone) {
+	      return _c('i', [_c('img', {
+	        attrs: {
+	          "src": itemone
+	        }
+	      })])
+	    })), _vm._v(" "), _c('span', [_c('i', [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c('i', [_vm._v("浏览：" + _vm._s(item.browse))])])])], 1)
+	  }))]), _vm._v(" "), _vm._m(2)])])])
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "head"
+	  }, [_c('img', {
+	    attrs: {
+	      "src": "/images/arrow.png",
+	      "width": "40",
+	      "height": "40"
+	    }
+	  }), _vm._v(" "), _c('span', [_vm._v("下拉刷新...")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "more"
+	  }, [_c('p', [_vm._v("我的她她圈")]), _vm._v(" "), _c('div', {
+	    staticClass: "manyMore"
+	  }, [_vm._v("\n\t\t    \t\t加入更多圈子\n\t\t    \t")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "foot"
+	  }, [_c('img', {
+	    attrs: {
+	      "src": "/images/arrow.png",
+	      "width": "40",
+	      "height": "40"
+	    }
+	  }), _vm._v(" "), _c('span', [_vm._v("上拉加载更多...")])])
+	}]}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(17)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "m-Cart"
+	  }, [_vm._v("\n\tqqqqqqqqq\n")])
+	},staticRenderFns: []}
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(19)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "m-my"
+	  }, [_vm._v("\n\tmy\n")])
+	},staticRenderFns: []}
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(21)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "m-list"
+	  }, [_c('header', [_c('ul', [_c('li', [_c('router-link', {
+	    attrs: {
+	      "to": '/'
+	    }
+	  }, [_c('span', {
+	    staticClass: "yo-ico"
+	  }, [_vm._v("")]), _c('span', [_vm._v("关闭")])])], 1), _vm._v(" "), _c('li', [_vm._v(_vm._s(_vm.$route.params.id))]), _vm._v(" "), _vm._m(0)])])])
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('li', [_c('i', [_vm._v("分享")])])
+	}]}
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	module.exports = "<div id=\"app\">	<router-view></router-view></div>"
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
